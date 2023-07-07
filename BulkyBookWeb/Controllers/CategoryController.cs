@@ -19,7 +19,7 @@ namespace BulkyBookWeb.Controllers
             return View(objCategoryList);
         }
 
-		//GET
+		//EDIT GET
 		public IActionResult Edit(int? id)
 		{
             if(id == null || id == 0)
@@ -38,7 +38,7 @@ namespace BulkyBookWeb.Controllers
 
 			return View(CategoryFromdb); //if id is found we will send it to view
 		}
-		//POST
+		//EDIT POST
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public IActionResult Edit(Category obj)
@@ -60,13 +60,13 @@ namespace BulkyBookWeb.Controllers
 
 
 
-		//GET
+		//CREATE GET
 		public IActionResult Create()
         {
 
             return View();
         }
-        //POST
+        //CREATE POST
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category obj)
